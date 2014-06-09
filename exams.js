@@ -1,0 +1,1 @@
+alert("The Following Page You Are About To See Is Absoloutely True And Is A Sighn Of Happiness");

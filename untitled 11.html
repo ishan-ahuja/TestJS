@@ -1,0 +1,74 @@
+<html>
+<head>
+	<script src=tigerz.js></script>
+	<style>
+	<!--
+	.flashgroup{
+	border:3px solid green;
+	}
+	-->
+	</style>
+	HOLA!
+	
+	<script language="JavaScript1.2">
+	
+	<img src=/Users/ishanahuja/Downloads/tiger-babies.jpg id="flash0" class="flashgroup">
+
+	/*
+	Flashing Border image script (credit must stay enclosed)
+	By javascriptkit.com
+	For this and over 400+ JavaScripts,
+	Visit http://www.javascriptkit.com
+	*/
+
+	//specify color of flash
+	var flashcolor="orange"
+	//specify speed (less is faster ie: 50)
+	var speed=150
+
+	/////No need to edit below here////
+	var curborder=new Array()
+	var increment=0
+	var flashobject=new Array()
+
+	if (document.all||document.getElementById){
+	while (document.getElementById("flash"+increment)!=null){
+	flashobject[increment]=document.getElementById? document.getElementById("flash"+increment).style : eval("document.all.flash"+increment+".style")
+	curborder[increment]=0
+	increment++
+	}
+	}
+
+
+	function flash(which){
+	if (curborder[which]==1){
+	flashobject[which].borderLeftColor=flashcolor
+	flashobject[which].borderBottomColor=flashobject[which].borderRightColor
+	}
+	else if (curborder[which]==2){
+	flashobject[which].borderTopColor=flashcolor
+	flashobject[which].borderLeftColor=flashobject[which].borderBottomColor
+	}
+	else if (curborder[which]==3){
+	flashobject[which].borderRightColor=flashcolor
+	flashobject[which].borderTopColor=flashobject[which].borderLeftColor
+	}
+	else if (curborder[which]==4){
+	flashobject[which].borderBottomColor=flashcolor
+	flashobject[which].borderRightColor=flashobject[which].borderTopColor
+	}
+
+	if (curborder[which]<=3)
+	curborder[which]++
+	else
+	curborder[which]=1
+	}
+
+	if (document.all||document.getElementById){
+	for (z=0;z<flashobject.length;z++){
+	var temp='setInterval("flash('+z+')",'+speed+')'
+	eval(temp)
+	}
+	}
+	</script>
+	</html>

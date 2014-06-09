@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+.shakeimage{
+position:relative
+}
+</style>
+<script language="JavaScript1.2">
+
+/*
+Shake image script (onMouseover)- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+//configure shake degree (where larger # equals greater shake)
+var rector=3
+
+///////DONE EDITTING///////////
+var stopit=0 
+var a=1
+
+function init(which){
+stopit=0
+shake=which
+shake.style.left=0
+shake.style.top=0
+}
+
+function rattleimage(){
+if ((!document.all&&!document.getElementById)||stopit==1)
+return
+if (a==1){
+shake.style.top=parseInt(shake.style.top)+rector+"px"
+}
+else if (a==2){
+shake.style.left=parseInt(shake.style.left)+rector+"px"
+}
+else if (a==3){
+shake.style.top=parseInt(shake.style.top)-rector+"px"
+}
+else{
+shake.style.left=parseInt(shake.style.left)-rector+"px"
+}
+if (a<4)
+a++
+else
+a=1
+setTimeout("rattleimage()",50)
+}
+
+function stoprattle(which){
+stopit=1
+which.style.left=0
+which.style.top=0
+}
+
+</script>
+<body bgcolor=#38ACEC>
+	<title> School Work </title>
+	<head>
+		<style>
+		h1
+		{
+		text-shadow: 5px 5px 5px #FF0000;
+		}
+		</style>
+		<h1> <font color="orange" face="comic sans ms"> <center> School Work  </h1> </font>
+			<font color="white" size="5" face="comic sans ms"> <p> Hi! My name is Ishan Ahuja </p>
+				<p> You are viewing this webpage because...... i'm not sure why. So guy told me to make it so I did. Think of this as a resume. Most of the work I have do will be mentioned here. </p>
+				<ul type="bullet"> <li>To Start Of.... </li>
+				</ul>
+				<img src="http://api.ning.com/files/BWe*zjqg0hxG-j0gE8b1teG6kjh3hF*NMws4xLTbpK4adfZCYziX4H2mZWCqv8hrEVFKU*M6id2SrEIpQVNLkA0Otk8OfoIH/GdGoenkaPublicSchoolVasantKunjCampus.gif" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()" alt="G.D Goenka Public School (My School)">
+			<p>	<font color="cyan"> I study in G.D Goenka Public School Vasant Kunj. <p>
+			<font color="white">	<p> <ul type="square"> <li>Moving On...</li>
+				<p> As of now, I have done a lot of programming. For the past few months I have been working on a game which I have made for iOS & Android.
+				 </p>
+				 <li> <p> More about my experiance</p>
+					 <p> I started coding at <a href=http://www.codeacademy.com> Codeacademy. </a> I have built lots of projects and I belive that i am good at HTML, CSS and JacaScript. I'm still gonna learning new languages like Python, Ruby JQuery etc. </p>
+	</body>
+	</html>
+				
